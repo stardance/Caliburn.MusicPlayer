@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="Caliburn.MusicPlayer.UserControls.PlayPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Caliburn.MusicPlayer.UserControls"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="600">
+    <Grid Margin="0 4 0 4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="30*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+
+        <Ellipse Grid.Column="1" 
+                 Width="32" 
+                 Height="32" 
+                 Stroke="Green">
+        </Ellipse>
+        <Image Grid.Column="1"
+               Width="26"
+               Height="26"
+               Source="pack://application:,,,/Resources/previous.png"/>
+
+        <Ellipse Grid.Column="3" 
+                 Width="32" 
+                 Height="32" 
+                 Stroke="Green">
+        </Ellipse>
+        <Image Grid.Column="3"
+               Width="26"
+               Height="26"
+               Source="pack://application:,,,/Resources/play.png"/>
+
+
+        <Ellipse Grid.Column="5" 
+                 Width="32" 
+                 Height="32" 
+                 Stroke="Green">
+        </Ellipse>
+        <Image Grid.Column="5"
+               Width="26"
+               Height="26"
+               Source="pack://application:,,,/Resources/next.png"/>
+
+
+        <ProgressBar Grid.Column="7" 
+                     Minimum="0" 
+                     Maximum="100"
+                     Height="10">
+        </ProgressBar>
+
+        <Label Grid.Column="9"
+               Content="{Binding TotalTime}"
+               VerticalAlignment="Center"
+               FontSize="14">
+        </Label>
+
+        <Slider Grid.Column="11"
+                VerticalAlignment="Center">
+        </Slider>
+
+        
+    </Grid>
+</UserControl>

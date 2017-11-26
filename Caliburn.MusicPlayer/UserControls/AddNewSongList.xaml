@@ -1,0 +1,59 @@
+﻿<Window x:Class="Caliburn.MusicPlayer.UserControls.AddNewSongList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Caliburn.MusicPlayer.UserControls"
+        xmlns:arthas="clr-namespace:Arthas.Controls.Metro;assembly=Arthas"
+        mc:Ignorable="d"
+        Title="新增歌单" Height="130" Width="300">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="180" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Grid.Column="1"
+                   Text="路径：" 
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0"
+                 x:Name="text_Path"
+                 Grid.Column="3"
+                 Width="170"
+                 Margin="2 4 2 4"/>
+        <arthas:MetroButton Grid.Row="0"
+                            Grid.Column="5"
+                            Width="30"
+                            Height="30"
+                            Content="浏览"
+                            MetroButtonState="None"
+                            Click="MetroButton_Click"/>
+        <TextBlock Grid.Row="1"
+                   Grid.Column="1"
+                   Text="歌单名:"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" 
+                 Grid.Column="3"
+                 Margin="2 4 2 4"
+                 x:Name="SongListName"/>
+        <Button Grid.Row="2"
+                Grid.Column="3"
+                Width="80"
+                Height="24"
+                HorizontalAlignment="Right"
+                Margin="2"
+                Content="确定"
+                Click="Button_Click"/>
+    </Grid>
+</Window>
